@@ -18,6 +18,7 @@
 		62089A8F2B788B5F00831E00 /* RollableDie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62089A8E2B788B5F00831E00 /* RollableDie.swift */; };
 		62089A912B788B9100831E00 /* DiceRollerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62089A902B788B9100831E00 /* DiceRollerViewModel.swift */; };
 		62089A942B788BE700831E00 /* DiceRollerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62089A932B788BE700831E00 /* DiceRollerScreen.swift */; };
+		62089A962B792DF600831E00 /* Publisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62089A952B792DF600831E00 /* Publisher+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		62089A8E2B788B5F00831E00 /* RollableDie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollableDie.swift; sourceTree = "<group>"; };
 		62089A902B788B9100831E00 /* DiceRollerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerViewModel.swift; sourceTree = "<group>"; };
 		62089A932B788BE700831E00 /* DiceRollerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceRollerScreen.swift; sourceTree = "<group>"; };
+		62089A952B792DF600831E00 /* Publisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				62089A652B786EEB00831E00 /* Assets.xcassets */,
 				62089A672B786EEB00831E00 /* Preview Content */,
 				62089A8D2B788B2C00831E00 /* Models */,
+				62089A972B792EBC00831E00 /* Helpers */,
 			);
 			path = "TheD&D";
 			sourceTree = "<group>";
@@ -153,6 +156,22 @@
 				62089A932B788BE700831E00 /* DiceRollerScreen.swift */,
 			);
 			path = "Dice Roller";
+			sourceTree = "<group>";
+		};
+		62089A972B792EBC00831E00 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62089A982B792EC200831E00 /* Combine */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62089A982B792EC200831E00 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				62089A952B792DF600831E00 /* Publisher+Extension.swift */,
+			);
+			path = Combine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +310,7 @@
 				62089A8C2B78707600831E00 /* Dice.swift in Sources */,
 				62089A622B786EEA00831E00 /* TheD_DApp.swift in Sources */,
 				62089A8F2B788B5F00831E00 /* RollableDie.swift in Sources */,
+				62089A962B792DF600831E00 /* Publisher+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

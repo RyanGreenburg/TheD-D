@@ -63,6 +63,7 @@ struct DiceSelectionView: View {
 struct DiceStepperView: View {
     
     @ObservedObject var model: RollableDie
+    @State var total: Int = 0
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -74,11 +75,15 @@ struct DiceStepperView: View {
                 in: 1...20
             )
             if !model.results.isEmpty {
+                Text("Results:")
                 HStack {
-                    Text("Results:")
-                    ForEach(model.results, id: \.self) { result in
-                        Text("\(result)")
-                    }
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))],
+                              content: {
+
+                        ForEach(model.results) { result in
+                            DiceResultView(result: result)
+                        }
+                    })
                 }
                 if model.results.count > 1 {
                     Text("Total: \(model.total)")
@@ -100,6 +105,21 @@ struct DiceStepperView: View {
         )
     }
 }
+
+struct DiceResultView: View {
+    @ObservedObject var result: RollableDie.Result
+    
+    var body: some View {
+        Button {
+            result.reroll()
+        } label: {
+            Text("\(result.number)")
+                .font(.caption)
+        }
+        .buttonStyle(.bordered)
+    }
+}
+
 
 #Preview {
     DiceRollerScreen()

@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel = DiceRollerViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            DiceSelectionView(viewModel: viewModel)
+
+            Spacer()
+            
         }
         .padding()
     }
 }
+
+
+
 
 #Preview {
     ContentView()
